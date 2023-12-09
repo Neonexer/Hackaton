@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import requests, json, time, sqlite3
+import requests, json, time, sqlite3, os
 
 class Data:
     pageNumber = 0
@@ -91,8 +91,8 @@ class Data:
         self.writeJson()
 
     def getData(self):
-        for i in range(0, self.countOfPages):
-        # for i in range(0, 10):
+        # for i in range(0, self.countOfPages):
+        for i in range(0, 5):
             self.progress = i
             self.parsePage(i)
             # print(i)
@@ -102,12 +102,33 @@ class Data:
     def __init__(self):
         self.countOfPages = self.findCountOfPages()
 
-
-    def saveData(self, data):
-        connection = sqlite3.connect('my_database.db')
+    def getDataFromTable(self):
+        connection = sqlite3.connect('data.db')
         cursor = connection.cursor()
 
+        # Выбираем всех пользователей
+        cursor.execute('SELECT * FROM Users')
+        users = cursor.fetchall()
+
+        # Выводим результаты
+        # for user in users:
+        #     print(user.id)
+
+        # Закрываем соединение
+        connection.close()
+        return users
+
+
+    def saveData(self, data):
+
+        try:
+            os.remove("data.db")
+        except:
+            None
+
         # print(data)
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
 
         # Создаем таблицу Users
         cursor.execute('''
@@ -123,7 +144,7 @@ class Data:
         for i in data:
             id = data.get(i)[0][0]
             name = i
-            print(name)
+            # print(name)
             email = ""
             phone = ""
             department = data.get(i)[0][1]

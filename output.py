@@ -8,10 +8,17 @@ app = Flask(__name__)
 def start():
     return render_template("index.html")
 
-@app.route('/data')
+@app.route('/data.html')
 def data():
     a = Data()
     data = a.getData()
+    a.saveData(data)
+    data = a.getDataFromTable()
+    print(data[0][0])
+    print(data[0][1])
+    print(data[0][2])
+    print(data[0][3])
+    print(data[0][4])
     return render_template("data.html", data=data)
 
 

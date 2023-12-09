@@ -4,7 +4,11 @@
 }
 
 .data-container {
-  display: inline-flex;
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
 }
 
 .header {
@@ -46,8 +50,10 @@
 
 .input-area{
   display: flex;
-	align-items: center;
+	/*align-items: center;*/
 	margin-bottom: 40px;
+  justify-content: center;
+
 }
 
 .title,
@@ -93,6 +99,7 @@
   border-style: solid;
   border-color: #000000;
   text-align: center;
+
   font-family: "RoundedMplus1C-Medium", sans-serif;
   font-size: 32px;
   line-height: 45.5px;
@@ -141,67 +148,65 @@
   text-decoration: underline;
 
 }
-.div1,
-.div1 * {
-  box-sizing: border-box;
-}
-.div1 {
-  color: rgba(64, 63, 64, 0.74);
-  text-align: center;
-  font-family: "RoundedMplus1CBold-Bold", sans-serif;
-  font-size: 42px;
-  line-height: 55.5px;
-  font-weight: 700;
-  position: relative;
-  width: 353px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.div2,
-.div2 * {
-  box-sizing: border-box;
-}
-.div2 {
-  color: rgba(64, 63, 64, 0.74);
-  text-align: center;
-  font-family: "RoundedMplus1CBold-Bold", sans-serif;
-  font-size: 39px;
-  line-height: 55.5px;
-  font-weight: 700;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
-.mainForm{
-  display: inline-flex;
-  #margin-left: 25%;
+.lni-search {
+    position: relative;
+    top: 33px;
+    left: 15px;
 }
-.table{
-  #width: 680px;
-  margin-right: 100px;
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 200px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+
+  margin-bottom: 300px;
 }
-.tNumber{
-  width: 80px;
-  height: 87px;
+
+#myTable {
+  border-collapse: collapse;
+  width: 1000px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+#myTable th {
+  color: #8f898f;
   text-align: center;
+  font-family: "RoundedMplus1C-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
 }
-.tFio{
-  width: 189px;
-  height: 84px;
+
+#myTable th, #myTable td {
   text-align: center;
+  padding: 12px;
 }
-.tPhone{
-  width: 189px;
-  height: 84px;
-  text-align: center;
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
 }
-.tCaf{
-  width: 226px;
-  height: 84px;
+
+#myTable tr.tabhead, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.div {
+  color: rgba(64, 63, 64, 0.74);
   text-align: center;
+  font-family: "RoundedMplus1CBold-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 html {
