@@ -4,7 +4,7 @@
 }
 
 .data-container {
-  max-width: 1500px;
+  max-width: 1300px;
   margin: auto;
   display: flex;
 	align-items: flex-start;
@@ -50,10 +50,8 @@
 
 .input-area{
   display: flex;
-	/*align-items: center;*/
-	margin-bottom: 40px;
-  justify-content: center;
-
+	justify-content: center;
+	margin: 40px;
 }
 
 .title,
@@ -99,7 +97,6 @@
   border-style: solid;
   border-color: #000000;
   text-align: center;
-
   font-family: "RoundedMplus1C-Medium", sans-serif;
   font-size: 32px;
   line-height: 45.5px;
@@ -107,9 +104,6 @@
   position: relative;
   width: 197px;
   height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .line-2,
@@ -165,7 +159,7 @@ tr:nth-child(even) {
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
-
+  margin-left: auto; margin-right: auto;
   margin-bottom: 300px;
 }
 
@@ -197,6 +191,11 @@ tr:nth-child(even) {
 
 #myTable tr.tabhead, #myTable tr:hover {
   background-color: #f1f1f1;
+}
+
+.vert-input-area {
+  display: block;
+
 }
 
 .div {

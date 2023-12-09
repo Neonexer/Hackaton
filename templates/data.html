@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Title</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../../Downloads/Telegram%20Desktop/IB1%202/icon.png">
+
+  <link rel="manifest" href="../../../Downloads/Telegram%20Desktop/IB1%202/site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+<body>
+
+
+  <main class="main">
+    <div class="data-container">
+
+      <div>
+        <div class="div">Все сотрудники</div>
+        <table id="myTable">
+          <tr class="tabhead">
+            <th style="width: 5%">№</th>
+            <th style="width: 35%">ФИО</th>
+            <th style="width: 15%">Телефон</th>
+            <th style="width: 15%">Email</th>
+            <th style="width: 30%">Кафедра</th>
+          </tr>
+          {% for i in data %}
+          <tr>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[3] }}</td>
+            <td>{{ i[2] }}</td>
+            <td>{{ i[4] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="vert-input-area">
+        <div class="div">Найти сотрудника</div>
+        <i class="lni lni-search"></i>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Введите имя" style="margin-left: 5%;">
+        <br>
+        <img src="static/images/Logo_SFU.png" width="180" height="180" style="margin-left: 30%;">
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

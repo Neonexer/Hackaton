@@ -91,8 +91,8 @@ class Data:
         self.writeJson()
 
     def getData(self):
-        # for i in range(0, self.countOfPages):
-        for i in range(0, 5):
+        for i in range(0, self.countOfPages):
+        # for i in range(0, 5):
             self.progress = i
             self.parsePage(i)
             # print(i)

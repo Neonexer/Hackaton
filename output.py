@@ -14,11 +14,11 @@ def data():
     data = a.getData()
     a.saveData(data)
     data = a.getDataFromTable()
-    print(data[0][0])
-    print(data[0][1])
-    print(data[0][2])
-    print(data[0][3])
-    print(data[0][4])
+    # print(data[0][0])
+    # print(data[0][1])
+    # print(data[0][2])
+    # print(data[0][3])
+    # print(data[0][4])
     return render_template("data.html", data=data)
 
 
