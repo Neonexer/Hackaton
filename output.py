@@ -5,11 +5,14 @@ from main import Data
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/index')
-def index():
+def start():
+    return render_template("index.html")
+
+@app.route('/data')
+def data():
     a = Data()
     data = a.getData()
-    return render_template("index.html", data=data)
+    return render_template("data.html", data=data)
 
 
 app.run(debug = True)

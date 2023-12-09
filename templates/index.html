@@ -1,12 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Hackaton</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
 </head>
+
 <body>
-    {% for i in data %}
-    <p>{{ i }} : {{ data[i][0][0] }} : {{ data[i][0][1] }}</p>
-    {% endfor %}
+  <div class="container">
+    <header  class="header">
+      <img src="../static/images/Logo_SFU.png" width="180" height="190">
+      <div class="line-1"></div>
+    </header>
+  </div>
+
+  <main class="main">
+    <div class="container">
+      <div class="title">Введите ссылку для получения данных</div>
+      <div class="input-area">
+        <input type="text" class="input-1">
+        <input type="button" class="btn-1" value="парсинг" onClick='location.href="https://ваша_ссылка. html/"'>
+      </div>
+    </div>
+  </main>
+
+  <div class="container">
+    <footer class="footer">
+
+      <div class="line-2">
+        <a href="data" class="footer-link">Политика обработки персональных данных</a>
+      </div>
+      <svg
+      class="star-1"
+      width="226"
+      height="226"
+      viewBox="0 0 226 226"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M112.037 1.42939C112.31 0.456452 113.69 0.456453 113.963 1.4294L138.057 87.251C138.151 87.5868 138.413 87.8492 138.749 87.9434L224.571 112.037C225.544 112.31 225.544 113.69 224.571 113.963L138.749 138.057C138.413 138.151 138.151 138.413 138.057 138.749L113.963 224.571C113.69 225.544 112.31 225.544 112.037 224.571L87.9434 138.749C87.8492 138.413 87.5867 138.151 87.251 138.057L1.42939 113.963C0.456452 113.69 0.456453 112.31 1.4294 112.037L87.251 87.9434C87.5868 87.8492 87.8492 87.5867 87.9434 87.251L112.037 1.42939Z"
+          fill="white"
+          fill-opacity="0.5"/>
+        <path
+          d="M112.519 1.56454C112.655 1.07807 113.345 1.07807 113.481 1.56454L137.575 87.3861C137.717 87.8898 138.11 88.2834 138.614 88.4248L224.435 112.519C224.922 112.655 224.922 113.345 224.435 113.481L138.614 137.575C138.11 137.717 137.717 138.11 137.575 138.614L113.481 224.435C113.345 224.922 112.655 224.922 112.519 224.435L88.4248 138.614C88.2834 138.11 87.8898 137.717 87.3861 137.575L1.56454 113.481C1.07807 113.345 1.07807 112.655 1.56454 112.519L87.3861 88.4248C87.8898 88.2834 88.2834 87.8898 88.4248 87.3861L112.519 1.56454Z"
+          stroke="black"
+          stroke-opacity="0.5"/>
+      </svg>
+    </footer>
+  </div>
+
+
+
+  <script src="js/app.js"></script>
+
 </body>
+
 </html>

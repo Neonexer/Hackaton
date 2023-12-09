@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hackaton</title>
+</head>
+<body>
+    {% if data %}
+    {% for i in data %}
+    <p>{{ i }} : {{ data[i][0][0] }} : {{ data[i][0][1] }}</p>
+    {% endfor %}
+    {% else %}}
+    <h3>{{ progress }}</h3>
+    {% endif %}}
+</body>
+</html>
